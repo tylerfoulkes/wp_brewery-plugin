@@ -1,15 +1,15 @@
 <?php
 /*
-Plugin Name: Custom Post Type Image Upload
-Plugin URI: http://www.foxrunsoftware.net/articles/wordpress/custom-post-type-with-image-uploads/
-Description: Custom Post Type Image Upload Demo
-Author: Justin Stern
-Author URI: http://www.foxrunsoftware.net
+Plugin Name: Beer Custom Post Type
+Plugin URI: 
+Description: Beer Custom Post Type
+Author: Tyler Foulkes
+Author URI: 
 Version: 1.0
 
-	Copyright: © 2012 Justin Stern (email : justin@foxrunsoftware.net)
+	Copyright: 
 	License: GNU General Public License v3.0
-	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+	License URI: 
 */
 
 class Custom_Post_Type_Image_Upload {
@@ -49,16 +49,17 @@ class Custom_Post_Type_Image_Upload {
 
 	    	// You can associate this CPT with a taxonomy or custom taxonomy. 
 	      
-		    'hierarchical'        => true,
-		    'public'              => true,
-		    'show_ui'             => true,
-		    'show_in_menu'        => true,
-		    'show_in_nav_menus'   => true,
-		    'show_in_admin_bar'   => true,
-		    'can_export'          => true,
-		    'has_archive'         => true,
-		    'exclude_from_search' => false,
-		    'publicly_queryable'  => true
+		    'hierarchical'        => TRUE,
+		    'public'              => TRUE,
+		    'show_ui'             => TRUE,
+		    'label'               => 'Beers',
+		    'show_in_menu'        => TRUE,
+		    'show_in_nav_menus'   => TRUE,
+		    'show_in_admin_bar'   => TRUE,
+		    'can_export'          => TRUE,
+		    'has_archive'         => TRUE,
+		    'exclude_from_search' => FALSE,
+		    'publicly_queryable'  => TRUE
 		    // 'rewrite'               => array( 'slug' => '/%show_category%', 'with_front' => true )
 		  );
 
@@ -74,8 +75,9 @@ class Custom_Post_Type_Image_Upload {
 		    'types',
 		    'beer',
 		    array(
-		      'label' => __( 'Types' ),
-		      'hierarchical' => true
+		      	'label' => __( 'Types' ),
+		      	'hierarchical' 				 => TRUE,
+		    	'show_in_nav_menus'          => TRUE,
 		    )
 		);
 	}
